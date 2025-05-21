@@ -1,0 +1,66 @@
+node_modules
+.env
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
+
+# Node dependencies
+node_modules/
+
+# TypeScript build directory
+dist/
+
+# Hardhat build artifacts
+cache/
+artifacts/
+
+# TypeChain generated files
+typechain/
+
+# Environment variables file
+.env
+
+# Coverage reports
+coverage/
+coverage.json
+
+# Yarn files
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# IDE files
+.vscode/
+.idea/
+
+# Hardhat deployments
+deployments/
+
+# Ignore gas reports
+gas-report.txt
+
+# ABI exports
+abi/
+
+# Hardhat coverage
+hardhat-coverage/
+
+# Log files
+logs/
+*.log

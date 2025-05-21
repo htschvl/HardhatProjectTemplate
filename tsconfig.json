@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                      // Use the latest ECMAScript features
+    "module": "NodeNext",                    // Compatible with both Node.js and Deno
+    "moduleResolution": "NodeNext",          // Modern module resolution strategy
+    "lib": ["ESNext", "DOM"],                // Include all ESNext library features and DOM for web3 interactions
+    "declaration": true,                     // Generate .d.ts files for type definitions
+    "declarationMap": true,                  // Generate sourcemaps for .d.ts files
+    "sourceMap": true,                       // Generate sourcemaps for debugging
+    "outDir": "./dist",                      // Output directory for compiled code
+    "rootDir": "./",                         // Root directory of source files
+    "strict": true,                          // Enable all strict type-checking options
+    "esModuleInterop": true,                 // Enable esModuleInterop for cleaner imports
+    "allowSyntheticDefaultImports": true,    // Allow default imports from modules with no default export
+    "experimentalDecorators": true,          // Enable experimental decorators 
+    "emitDecoratorMetadata": true,           // Emit decorator metadata
+    "skipLibCheck": true,                    // Skip type-checking of declaration files
+    "forceConsistentCasingInFileNames": true,// Ensure consistent casing in file names
+    "resolveJsonModule": true,               // Allow importing .json files
+    "isolatedModules": true,                 // Ensure each file can be transpiled independently
+    "noImplicitAny": true,                   // Error on expressions and declarations with implied 'any' type
+    "strictNullChecks": true,                // Enable strict null checks
+    "strictFunctionTypes": true,             // Enable strict checking of function types
+    "noImplicitReturns": true,               // Report error when not all code paths in function return a value
+    "noFallthroughCasesInSwitch": true,      // Report errors for fallthrough cases in switch statement
+    "noUnusedLocals": true,                  // Report errors on unused locals
+    "noUnusedParameters": true,              // Report errors on unused parameters
+    "allowJs": true,                         // Allow JavaScript files to be compiled
+    "checkJs": true,                         // Report errors in .js files
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "paths": {
+      "@/*": ["./src/*"],                    // Path alias for src directory
+      "@contracts/*": ["./contracts/*"],     // Path alias for contracts
+      "@test/*": ["./test/*"],               // Path alias for tests
+      "@scripts/*": ["./scripts/*"]          // Path alias for scripts
+    },
+    "baseUrl": "./"
+  },
+  "include": [
+    "./contracts/**/*.ts",
+    "./contracts/**/*.sol",
+    "./test/**/*.ts",
+    "./scripts/**/*.ts",
+    "./deploy/**/*.ts",
+    "./src/**/*.ts",
+    "./hardhat.config.ts",
+    "./types/**/*.ts",
+    "./typechain/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "cache",
+    "artifacts"
+  ],
+  "files": [
+    "hardhat.config.ts"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "swc": true                              // Use swc for faster transpilation with ts-node
+  }
+}
